@@ -1,0 +1,16 @@
+(Binary favicon.ico file - This is a placeholder comment)
+
+NOTE: The favicon.ico should be generated from the favicon.svg above.
+You can use online tools or image editors to convert the SVG to ICO format.
+
+For GitHub Pages deployment, the SVG favicon will work in modern browsers.
+The ICO serves as a fallback for older browsers.
+
+Recommended approach:
+1. Use the favicon.svg as the primary favicon (already linked in index.html)
+2. Generate a 32x32 ICO from the SVG using a tool like:
+   - https://convertio.co/svg-ico/
+   - https://cloudconvert.com/svg-to-ico
+   - OR use a design tool like Figma/Illustrator to export
+
+For now, the SVG favicon will function correctly in all modern browsers.
