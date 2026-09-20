@@ -1,0 +1,267 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   HAVEN ZERO-METER FOUNDATION
+   ============================================================ */
+
+@layer base {
+  :root {
+    --haven-obsidian: #0a0a0a;
+    --haven-charcoal: #1a1a1a;
+    --haven-graphite: #3a3a3a;
+    --haven-champagne: #faf8f4;
+    --haven-champagne-muted: #f5f1e8;
+    --haven-bronze: #b8935f;
+    --haven-bronze-dark: #9d7a4a;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  
+  body {
+    @apply bg-obsidian-950 text-champagne-50;
+    font-feature-settings: "liga", "kern";
+    text-rendering: optimizeLegibility;
+  }
+  
+  ::selection {
+    @apply bg-bronze-500 text-obsidian-950;
+  }
+}
+
+@layer components {
+  
+  /* ============================================================
+     PREMIUM BUTTON SYSTEM
+     ============================================================ */
+  
+  .btn-primary {
+    @apply relative px-8 py-4 bg-champagne-50 text-obsidian-950 font-medium tracking-luxury;
+    @apply overflow-hidden transition-all duration-300;
+    @apply hover:bg-champagne-100 hover:shadow-lg hover:shadow-bronze-500/20;
+    @apply focus:outline-none focus:ring-2 focus:ring-bronze-500 focus:ring-offset-2 focus:ring-offset-obsidian-950;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
+  }
+  
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-bronze-400 to-bronze-600;
+    @apply opacity-0 transition-opacity duration-300;
+    z-index: -1;
+  }
+  
+  .btn-primary:hover::before {
+    @apply opacity-10;
+  }
+  
+  .btn-secondary {
+    @apply relative px-8 py-4 border-2 border-champagne-50/30 text-champagne-50 font-medium tracking-luxury;
+    @apply overflow-hidden transition-all duration-300;
+    @apply hover:border-bronze-500 hover:text-bronze-400;
+    @apply focus:outline-none focus:ring-2 focus:ring-bronze-500 focus:ring-offset-2 focus:ring-offset-obsidian-950;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
+  }
+  
+  .btn-secondary::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-bronze-500 to-bronze-600;
+    @apply scale-x-0 transition-transform duration-300 origin-left;
+  }
+  
+  .btn-secondary:hover::after {
+    @apply scale-x-100;
+  }
+  
+  /* ============================================================
+     MAGNETIC BUTTON EFFECT (Desktop Only)
+     ============================================================ */
+  
+  @media (hover: hover) and (pointer: fine) {
+    .btn-magnetic {
+      transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+  }
+  
+  /* ============================================================
+     TYPOGRAPHY SYSTEM
+     ============================================================ */
+  
+  .heading-hero {
+    @apply font-display font-bold text-hero leading-none tracking-tight-luxury;
+    @apply text-champagne-50;
+  }
+  
+  .heading-section {
+    @apply font-display font-bold text-section leading-tight tracking-tight-luxury;
+    @apply text-champagne-50;
+  }
+  
+  .heading-card {
+    @apply font-display font-semibold text-2xl md:text-3xl leading-tight;
+    @apply text-champagne-50;
+  }
+  
+  .text-luxury {
+    @apply text-champagne-100/80 leading-relaxed;
+    font-size: clamp(1rem, 2vw, 1.125rem);
+  }
+  
+  .text-muted {
+    @apply text-champagne-100/50;
+  }
+  
+  /* ============================================================
+     PREMIUM CARD SYSTEM
+     ============================================================ */
+  
+  .card-premium {
+    @apply relative bg-obsidian-800/40 backdrop-blur-sm;
+    @apply border border-champagne-50/10;
+    @apply transition-all duration-500;
+    @apply hover:border-bronze-500/40 hover:bg-obsidian-800/60;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+  }
+  
+  .card-premium::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-bronze-500/5 to-transparent;
+    @apply opacity-0 transition-opacity duration-500;
+    pointer-events: none;
+  }
+  
+  .card-premium:hover::before {
+    @apply opacity-100;
+  }
+  
+  /* ============================================================
+     GLOW EFFECTS
+     ============================================================ */
+  
+  .glow-bronze {
+    box-shadow: 0 0 40px rgba(184, 147, 95, 0.15);
+  }
+  
+  .glow-bronze-strong {
+    box-shadow: 0 0 60px rgba(184, 147, 95, 0.3);
+  }
+  
+  /* ============================================================
+     FOCUS VISIBLE (Accessibility)
+     ============================================================ */
+  
+  *:focus-visible {
+    @apply outline-none ring-2 ring-bronze-500 ring-offset-2 ring-offset-obsidian-950;
+  }
+  
+  /* ============================================================
+     CUSTOM SCROLLBAR
+     ============================================================ */
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-obsidian-900;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-graphite-500 hover:bg-bronze-500;
+    border-radius: 5px;
+  }
+  
+  /* ============================================================
+     GRADIENT TEXT
+     ============================================================ */
+  
+  .text-gradient-bronze {
+    @apply bg-gradient-to-r from-bronze-400 via-champagne-200 to-bronze-400 bg-clip-text text-transparent;
+  }
+  
+  /* ============================================================
+     SECTION SPACING
+     ============================================================ */
+  
+  .section-padding {
+    @apply py-20 md:py-32 lg:py-40;
+  }
+  
+  .section-padding-sm {
+    @apply py-12 md:py-20 lg:py-24;
+  }
+  
+  /* ============================================================
+     CONTAINER SYSTEM
+     ============================================================ */
+  
+  .container-haven {
+    @apply max-w-7xl mx-auto px-6 md:px-8 lg:px-12;
+  }
+  
+  /* ============================================================
+     ANIMATED BORDER
+     ============================================================ */
+  
+  .border-animated {
+    @apply relative;
+  }
+  
+  .border-animated::after {
+    content: '';
+    @apply absolute inset-0 border-2 border-bronze-500;
+    @apply opacity-0 transition-opacity duration-300;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+  }
+  
+  .border-animated:hover::after {
+    @apply opacity-100;
+  }
+}
+
+@layer utilities {
+  
+  /* ============================================================
+     CLIP PATH UTILITIES
+     ============================================================ */
+  
+  .clip-corner {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%);
+  }
+  
+  .clip-corner-lg {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%);
+  }
+  
+  /* ============================================================
+     BACKDROP BLUR
+     ============================================================ */
+  
+  .backdrop-haven {
+    @apply backdrop-blur-md bg-obsidian-900/80;
+  }
+  
+  /* ============================================================
+     TEXT SHADOW
+     ============================================================ */
+  
+  .text-shadow-glow {
+    text-shadow: 0 0 30px rgba(184, 147, 95, 0.3);
+  }
+}
