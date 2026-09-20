@@ -1,0 +1,24 @@
+(Binary PNG file - This is a placeholder comment)
+
+NOTE: The apple-touch-icon.png should be a 180x180px PNG version of the favicon design.
+
+To create this file:
+1. Export the favicon.svg design as a PNG at 180x180px resolution
+2. Ensure the background is solid (#0a0a0a - obsidian)
+3. The wolf design should be centered and clearly visible at small sizes
+
+This file is used when users save the HAVEN website to their iOS home screen.
+
+Recommended export settings:
+- Size: 180x180px
+- Format: PNG
+- Background: Solid #0a0a0a
+- Quality: High (no compression artifacts)
+
+Tools you can use:
+- Figma: Export as PNG at 180x180
+- Inkscape: Export PNG with custom dimensions
+- Adobe Illustrator: Export for Screens
+- Online SVG to PNG converters
+
+The favicon.svg design has been created to work well at this size.
