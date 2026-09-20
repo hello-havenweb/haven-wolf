@@ -1,0 +1,45 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- HAVEN Favicon - Minimalist Wolf Head Mark -->
+  <!-- Obsidian/Champagne/Bronze Color Scheme -->
+  
+  <!-- Background -->
+  <rect width="256" height="256" fill="#0a0a0a"/>
+  
+  <!-- Wolf Head Geometric Design -->
+  <!-- Ears -->
+  <path d="M80 70 L70 40 L90 60 Z" fill="#faf8f4" opacity="0.9"/>
+  <path d="M176 70 L186 40 L166 60 Z" fill="#faf8f4" opacity="0.9"/>
+  
+  <!-- Head Shape -->
+  <path d="M128 60 Q165 75 175 110 Q180 140 170 165 Q160 185 128 195 Q96 185 86 165 Q76 140 81 110 Q91 75 128 60 Z" 
+        fill="url(#wolfGradient)" 
+        stroke="#b8935f" 
+        stroke-width="2"/>
+  
+  <!-- Eyes with Bronze Accent -->
+  <circle cx="108" cy="115" r="6" fill="#b8935f"/>
+  <circle cx="148" cy="115" r="6" fill="#b8935f"/>
+  
+  <!-- Snout Accent -->
+  <path d="M120 145 Q128 152 136 145" stroke="#faf8f4" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <circle cx="128" cy="142" r="4" fill="#b8935f"/>
+  
+  <!-- HAVEN Initial - Subtle H Mark -->
+  <path d="M115 210 L115 235 M115 222.5 L141 222.5 M141 210 L141 235" 
+        stroke="#b8935f" 
+        stroke-width="3" 
+        stroke-linecap="round" 
+        opacity="0.6"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="wolfGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#faf8f4" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#f5f1e8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ebe4d4" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Subtle Glow Effect -->
+  <circle cx="128" cy="128" r="100" fill="none" stroke="#b8935f" stroke-width="0.5" opacity="0.2"/>
+</svg>
